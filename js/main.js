@@ -5,8 +5,8 @@ const btn = document.querySelector('input[type="button"]'),
       thisYear = new Date().getFullYear()
 
 btn.addEventListener('click',function(){
-  if(!isNaN(input.value)){
-    const birthYear = input.value
+  const birthYear = input.value
+  if(!isNaN(birthYear) && birthYear.toString().length === 4){
     
     americanAge = thisYear - birthYear
     koreanAge = americanAge + 1
