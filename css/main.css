@@ -1,0 +1,44 @@
+.box {
+  height : 200px;
+  width: 450px;
+  border : 1px solid #888;
+  border-radius : 30px;
+  position:absolute;
+  top: 20%;
+  left: 0;
+  right:0;
+  margin: 0 auto;
+  display:flex;
+  flex-direction : column;
+  justify-content : space-around;
+  align-items : center;
+}
+
+.box p {
+  font-size : 2rem;
+  font-weight : bold;
+  text-align : center;
+  padding : 10px 0;
+}
+
+input {
+  font-size : 1.5rem;
+}
+
+ .text_box {
+  position : absolute;
+  top : 300px;
+  display : flex;
+  align-items : baseline;
+}
+
+.text_box h1 {
+  font-size: 5rem;
+  font-weight:800;
+  text-align:center;
+}
+
+.text_box span {
+  font-size : 1.3rem;
+  display:none;
+}
