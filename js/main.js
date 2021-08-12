@@ -12,10 +12,10 @@ btn.addEventListener('click',function(){
       koreanAge = americanAge + 1
       result.innerText = koreanAge  
     } else {
-      alert(`${thisYear} 보다 작은 수를 입력해주십시오.`)
+      alert(`${thisYear} 보다 작은 수를 입력해 주십시오.`)
     }
   } else {
-    alert('4자리 숫자로 입력해주십시오.')
+    alert('4자리 숫자로 입력해 주십시오.')
   }
 })
 
@@ -28,10 +28,10 @@ input.addEventListener('keypress',function(e){
         koreanAge = americanAge + 1
         result.innerText = koreanAge  
       } else {
-          alert(`${thisYear}보다 작은 수를 입력해주십시오.`)
+          alert(`${thisYear}보다 작은 수를 입력해 주십시오.`)
       }    
     } else {
-      alert('4자리 숫자로 입력해주십시오.')
+      alert('4자리 숫자로 입력해 주십시오.')
     }
   }
 })
