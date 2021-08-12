@@ -1,19 +1,19 @@
 const btn = document.querySelector('input[type="button"]'),
       input = document.querySelector('input[type="text"]'),
       result = document.querySelector('h1'),
-      resultDeco = document.querySelector('span'),
       thisYear = new Date().getFullYear()
 
 btn.addEventListener('click',function(){
-  const birthYear = input.value
+  const birthYear = input.value,
+        americanAge = thisYear - birthYear
+
   if(!isNaN(birthYear) && birthYear.toString().length === 4){
-    
-    americanAge = thisYear - birthYear
-    koreanAge = americanAge + 1
-    
-    result.innerText = koreanAge
-    resultDeco.style.display = 'block'
-    
+    if(americanAge>=0){
+      koreanAge = americanAge + 1
+      result.innerText = koreanAge  
+    } else {
+      alert(`${thisYear} 보다 작은 수를 입력해주십시오.`)
+    }
   } else {
     alert('4자리 숫자로 입력해주십시오.')
   }
@@ -21,20 +21,17 @@ btn.addEventListener('click',function(){
 
 input.addEventListener('keypress',function(e){
   if (e.keyCode === 13){
-    {
-      const birthYear = input.value
-      if(!isNaN(birthYear) && birthYear.toString().length === 4){
-        
-        americanAge = thisYear - birthYear
+    const birthYear = input.value,
+    americanAge = thisYear - birthYear
+    if(!isNaN(birthYear) && birthYear.toString().length === 4){
+      if(americanAge>=0){
         koreanAge = americanAge + 1
-        
-        result.innerText = koreanAge
-        resultDeco.style.display = 'block'
-        
+        result.innerText = koreanAge  
       } else {
-        alert('4자리 숫자로 입력해주십시오.')
-      }
+          alert(`${thisYear}보다 작은 수를 입력해주십시오.`)
+      }    
+    } else {
+      alert('4자리 숫자로 입력해주십시오.')
     }
-
   }
-} )
+})

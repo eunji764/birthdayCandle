@@ -1,4 +1,23 @@
-.box {
+.container {
+  width: 768px;
+  height: 1000px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url('../image/bg_common.PNG') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container .box {
   height : 200px;
   width: 450px;
   border : 1px solid #888;
@@ -25,20 +44,48 @@ input {
   font-size : 1.5rem;
 }
 
- .text_box {
+.text_box {
+  height: 80px;
   position : absolute;
-  top : 300px;
-  display : flex;
-  align-items : baseline;
-}
-
-.text_box h1 {
-  font-size: 5rem;
+  top : 330px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 8rem;
   font-weight:800;
   text-align:center;
+  z-index: 3;
 }
 
-.text_box span {
-  font-size : 1.3rem;
-  display:none;
+
+
+.container .candle {
+  width: 390px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 160px;
+}
+
+.container .candle div {
+  width: 10px;
+  height: 70px;
+  background-color: #9dff71;
+  position: relative;
+}
+
+.container .candle div:nth-child(2n) {
+  height: 90px;
+}
+
+.container .candle div:nth-child(3) {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.container .candle div img {
+  width: 25px;
+  height: 40.4px;
+  filter : drop-shadow(5px -5px 10px #ff943a);
+  position: absolute;
+  top: -36px;
+  left: -7.5px;
 }
